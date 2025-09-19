@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GetProfit Style Page</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #fff;
+      color: #333;
+    }
+    .navbar {
+      padding: 1rem 0;
+    }
+    .container {
+  max-width: 1100px; /* or 1000px, 900px depending on how small you want */
+}
+.btn{
+  border: 1px solid #011a58;
+
+}
+.btn:hover{
+  background-color: #011a58;
+  color: #fff;
+}
+
+    .btn-custom {
+      background: #011a58;
+      color: #fff;
+      font-weight: 600;
+      border-radius: 50px;
+      padding: 10px 20px;
+      border: none;
+    }
+    .btn-custom:hover {
+      background: #e0b856;
+      color: #fff;
+    }
+    .hero-section {
+      padding: 80px 0;
+    }
+    .hero-section h1 {
+      font-weight: 700;
+      font-size: 2.5rem;
+    }
+    .hero-section p {
+      font-size: 1.1rem;
+      margin-top: 15px;
+    }
+    .highlight-text {
+      border-left: 3px solid #f3c96a;
+      padding-left: 10px;
+      margin: 20px 0;
+      font-weight: 500;
+    }
+    .hero-img {
+      max-width: 100%;
+      border-radius: 10px;
+      /* box-shadow: 0 10px 30px rgba(0,0,0,0.1); */
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+<!-- Navbar -->
+<nav class="navbar navbar-light bg-white">
+  <div class="container d-flex justify-content-between align-items-center">
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <img src="logo.png" alt="Logo" width="35" height="35" class="me-2">
+    </a>
+
+    <div class="d-flex align-items-center gap-3">
+      <!-- Flag Dropdown -->
+      <div class="dropdown">
+        <img src="https://flagcdn.com/24x18/gb.png" 
+             alt="English" 
+             class="dropdown-toggle" 
+             id="flagDropdown" 
+             data-bs-toggle="dropdown" 
+             style="cursor:pointer;">
+  <i class="fa-solid fa-chevron-down ms-1 dropdown-toggle" style="cursor:pointer;" data-bs-toggle="dropdown"></i>
+        <ul class="dropdown-menu dropdown-menu-end p-2" aria-labelledby="flagDropdown" style="max-height:250px; overflow-y:auto;">
+          <li>
+            <a href="#" class="dropdown-item d-flex align-items-center flag-item">
+              <img src="https://flagcdn.com/24x18/gb.png" alt="English" class="me-2"> English
+            </a>
+          </li>
+          <li>
+            <a href="#" class="dropdown-item d-flex align-items-center flag-item">
+              <img src="https://flagcdn.com/24x18/us.png" alt="USA" class="me-2"> USA
+            </a>
+          </li>
+          <li>
+            <a href="#" class="dropdown-item d-flex align-items-center flag-item">
+              <img src="https://flagcdn.com/24x18/fr.png" alt="France" class="me-2"> France
+            </a>
+          </li>
+          <li>
+            <a href="#" class="dropdown-item d-flex align-items-center flag-item">
+              <img src="https://flagcdn.com/24x18/fr.png" alt="France" class="me-2"> France
+            </a>
+          </li>
+          <li>
+            <a href="#" class="dropdown-item d-flex align-items-center flag-item">
+              <img src="https://flagcdn.com/24x18/fr.png" alt="France" class="me-2"> France
+            </a>
+          </li>
+          <li>
+            <a href="#" class="dropdown-item d-flex align-items-center flag-item">
+              <img src="https://flagcdn.com/24x18/fr.png" alt="France" class="me-2"> France
+            </a>
+          </li>
+          <li>
+            <a href="#" class="dropdown-item d-flex align-items-center flag-item">
+              <img src="https://flagcdn.com/24x18/fr.png" alt="France" class="me-2"> France
+            </a>
+          </li>
+          <li>
+            <a href="#" class="dropdown-item d-flex align-items-center flag-item">
+              <img src="https://flagcdn.com/24x18/fr.png" alt="France" class="me-2"> France
+            </a>
+          </li>
+          <li>
+            <a href="#" class="dropdown-item d-flex align-items-center flag-item">
+              <img src="https://flagcdn.com/24x18/fr.png" alt="France" class="me-2"> France
+            </a>
+          </li>
+          <li>
+            <a href="#" class="dropdown-item d-flex align-items-center flag-item">
+              <img src="https://flagcdn.com/24x18/fr.png" alt="France" class="me-2"> France
+            </a>
+          </li><li>
+            <a href="#" class="dropdown-item d-flex align-items-center flag-item">
+              <img src="https://flagcdn.com/24x18/fr.png" alt="France" class="me-2"> France
+            </a>
+          </li>
+          <!-- Add more flags as needed -->
+        </ul>
+      </div>
+
+      <a href="#" class="btn rounded-pill px-4">Log In</a>
+    </div>
+  </div>
+</nav>
+
+<!-- Optional: change main flag on selection -->
+<script>
+  const flagDropdownItems = document.querySelectorAll('.flag-item');
+  const mainFlag = document.getElementById('flagDropdown');
+
+  flagDropdownItems.forEach(item => {
+    item.addEventListener('click', function(e) {
+      e.preventDefault();
+      const img = this.querySelector('img').src;
+      mainFlag.src = img; // update main flag
+    });
+  });
+</script>
+
+
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container"><!-- changed from container-fluid -->
+      <div class="row align-items-center">
+        <!-- Left Side -->
+        <div class="col-lg-5">
+          <h1>CPA <br>Revenue Share <br>Turnover Share</h1>
+          <p class="highlight-text">We have several reward models for different types of partners</p>
+          <p class="text-muted">Financial Offers from Direct Advertisers</p>
+          <button class="btn btn-custom">Create account</button>
+        </div>
+
+        <!-- Right Side -->
+        <div class="col-lg-7 text-center mt-4 mt-lg-0">
+          <img src="home.png" alt="Dashboard Preview" class="hero-img">
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <section class="partner-section py-5">
+  <div class="container">
+    <div class="partner-box p-5 rounded-4 text-center">
+      <h2 class="fw-bold">
+        Become a partner in <span class="text-highlight">a few clicks</span>
+      </h2>
+      <p class="mt-2">
+        <span class="badge bg-light text-dark border border-primary rounded-pill px-3 py-2">
+          If you are a <strong>Webmaster</strong>, <strong>Influencer</strong> or <strong>Introducing Broker</strong> (IB)
+        </span>
+      </p>
+
+      <!-- Steps in ONE row -->
+      <div class="steps d-flex justify-content-center align-items-center flex-wrap mt-5">
+
+        <div class="step text-center">
+          <i class="bi bi-person-circle step-icon"></i>
+          <p>Create Account</p>
+        </div>
+
+        <i class="bi bi-arrow-right step-arrow mx-3"></i>
+
+        <div class="step text-center">
+          <i class="bi bi-link-45deg step-icon"></i>
+          <p>Get an affiliate link</p>
+        </div>
+
+        <i class="bi bi-arrow-right step-arrow mx-3"></i>
+
+        <div class="step text-center">
+          <i class="bi bi-megaphone step-icon"></i>
+          <p>Post it on the internet</p>
+        </div>
+
+        <i class="bi bi-arrow-right step-arrow mx-3"></i>
+
+        <div class="step text-center">
+          <i class="bi bi-currency-dollar step-icon"></i>
+          <p>Get Accruals</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Bootstrap Icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+<style>
+  .partner-box {
+    background: #f8f9fa;
+    position: relative;
+    overflow: hidden;
+  }
+  .partner-box::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url('https://www.transparenttextures.com/patterns/white-waves.png');
+    opacity: 0.08;
+  }
+  .partner-box h2, .partner-box p, .steps {
+    position: relative;
+    z-index: 2;
+  }
+  .text-highlight {
+    color: #011A58;
+  }
+  .step-icon {
+    font-size: 3rem;
+    color: #011A58;
+    font-weight: bold;
+  }
+  .step-arrow {
+    font-size: 2rem;
+    color: #011A58;
+  }
+  .step {
+    min-width: 140px;
+  }
+</style>
+
+
+
+
+
+<section class="affiliate-section">
+  <h2>Become one of our <span>112K affiliates</span></h2>
+  <div class="affiliate-sub">
+    But receive attention and support as if you were the only one 💙
+  </div>
+
+  <div class="affiliate-card">
+    <div class="affiliate-text">
+      <h5>Sign up now and receive an individual strategy</h5>
+      <p>From our managers depending on the type of your traffic.</p>
+      <button class="btn-custom">Sign up</button>
+    </div>
+    <div class="affiliate-img">
+      <img src="home.png" 
+           alt="Strategy" class="img-fluid">
+    </div>
+  </div>
+
+  <div class="footer-logos">
+    <img src="https://cryptologos.cc/logos/bitcoin-btc-logo.png" alt="Bitcoin">
+    <img src="https://cryptologos.cc/logos/ethereum-eth-logo.png" alt="Ethereum">
+    <img src="https://cryptologos.cc/logos/tether-usdt-logo.png" alt="Tether">
+    <img src="https://seeklogo.com/images/S/skrill-logo-CE93CCF8B4-seeklogo.com.png" alt="Skrill">
+    <img src="https://seeklogo.com/images/N/neteller-logo-86E2E9A2C6-seeklogo.com.png" alt="Neteller">
+    <img src="https://seeklogo.com/images/U/upi-logo-24CFAF6A2D-seeklogo.com.png" alt="UPI">
+  </div>
+</section>
+
+<style>
+  .affiliate-section {
+    background: #eaf2fc;
+    border-radius: 20px;
+    padding: 60px 20px;
+    text-align: center;
+    max-width: 950px;
+    margin: 50px auto;
+    position: relative;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+  }
+
+  .affiliate-section h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1a1a1a;
+  }
+
+  .affiliate-section h2 span {
+    color: #2c80ff;
+  }
+
+  .affiliate-sub {
+    margin: 15px 0 40px;
+    display: inline-block;
+    padding: 8px 18px;
+    border: 1px solid #cdd8e6;
+    border-radius: 25px;
+    background: #fff;
+    font-size: 15px;
+    color: #1a1a1a;
+  }
+
+  .affiliate-card {
+    background: #fff;
+    border-radius: 15px;
+    padding: 30px;
+    text-align: left;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .affiliate-card h5 {
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+  .affiliate-card p {
+    font-size: 14px;
+    color: #6c757d;
+  }
+
+  .btn-custom {
+    background: #1a1a1a;
+    color: #fff;
+    border-radius: 25px;
+    padding: 10px 28px;
+    border: none;
+    margin-top: 15px;
+    font-weight: 500;
+    transition: 0.3s;
+  }
+
+  .btn-custom:hover {
+    background: #2c80ff;
+  }
+
+  .affiliate-img {
+    max-width: 280px;
+  }
+
+  .footer-logos {
+    margin-top: 40px;
+    opacity: 0.7;
+  }
+
+  .footer-logos img {
+    height: 30px;
+    margin: 0 15px;
+    filter: grayscale(100%);
+    transition: filter 0.3s;
+  }
+
+  .footer-logos img:hover {
+    filter: grayscale(0%);
+  }
+</style>
+
+
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
